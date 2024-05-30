@@ -514,7 +514,7 @@ def test(Data,
             with torch.cuda.device(device):
                 torch.cuda.empty_cache() 
         
-    logging.info(f'TRAIN/TEST COMPLETE')
+    logging.info('TRAIN/TEST COMPLETE')
     cumRets = np.cumprod(1+returns)
     plt.figure()
     plt.plot_date(daily_dates[-len(cumRets):], cumRets, marker='None', linestyle='solid')
@@ -632,7 +632,7 @@ def estimate(Data,
         with torch.cuda.device(device):
             torch.cuda.empty_cache() 
         
-    logging.info(f'ESTIMATION COMPLETE')
+    logging.info('ESTIMATION COMPLETE')
     
     np.save(os.path.join(output_path, 'WeightsComplete_' + model_tag + '.npy'), all_weights)
                          

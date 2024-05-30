@@ -48,7 +48,7 @@ def configure_logging(app_name:str, run_id:str = None, logdir:str = "logs", debu
     logging.getLogger('').handlers = []
     logging.getLogger('').addHandler(fh)
     logging.getLogger('').addHandler(ch)
-    logging.info(f"STARTED LOGGING FROM CHILD")
+    logging.info("STARTED LOGGING FROM CHILD")
     return username, hostname, logtag, starttimestr
 
 

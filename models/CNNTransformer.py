@@ -51,7 +51,7 @@ class CNNTransformer(nn.Module):
         
         super(CNNTransformer, self).__init__()
         if hidden_units and hidden_units_factor and hidden_units != hidden_units_factor * filter_numbers[-1]:
-            raise Exception(f"`hidden_units` conflicts with `hidden_units_factor`; provide one or the other, but not both.")
+            raise Exception("`hidden_units` conflicts with `hidden_units_factor`; provide one or the other, but not both.")
         if hidden_units_factor:
             hidden_units = hidden_units_factor * filter_numbers[-1]
         self.logdir = logdir

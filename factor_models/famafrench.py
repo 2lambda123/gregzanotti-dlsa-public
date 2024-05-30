@@ -98,12 +98,12 @@ class FamaFrench:
             if printOnConsole:
                 logging.info(f"Finished! Cap: {cap}, factor: {factor}")
             if save:
-                logging.info(f"Saving")
-                residuals_mtx_filename = f"DailyFamaFrench_OOSMatrixresiduals" + \
+                logging.info("Saving")
+                residuals_mtx_filename = "DailyFamaFrench_OOSMatrixresiduals" + \
                                          f"_{factor}_factors_{initialOOSYear}_initialOOSYear_{sizeWindow}_rollingWindow_{cap}_Cap.npy"
                 np.save(os.path.join(self._logdir, residuals_mtx_filename), residualsMatricesOOS)
-                residuals_filename = f"DailyFamaFrench_OOSresiduals" + \
+                residuals_filename = "DailyFamaFrench_OOSresiduals" + \
                                      f"_{factor}_factors_{initialOOSYear}_initialOOSYear_{sizeWindow}_rollingWindow_{cap}_Cap.npy"
                 np.save(os.path.join(self._logdir, residuals_filename), residualsOOS)
-                logging.info(f"Saved")
+                logging.info("Saved")
 
